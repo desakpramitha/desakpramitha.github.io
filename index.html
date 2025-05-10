@@ -1,332 +1,1215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desak's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+   <link
+      rel="icon"
+      href="/assets/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              quicksand: ['Quicksand', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#f5f7fa] text-gray-800 font-quicksand max-w-5xl mx-auto pt-6 md:pb-0"
+  >
+    <!-- <div class="hidden md:flex justify-between w-full pt-6 px-5 mb-6">
+      <p class="self-center font-regular font-pacifico text-2xl">
+        Deva
+        <span
+          class="bg-gradient-to-b from-[#FF9C1B] to-[#E80505] bg-clip-text text-transparent"
+          >Karisnu</span
+        >
+      </p>
+    </div> -->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <div class="flex flex-col lg:flex-row">
+      <!-- Left Sidebar -->
+      <aside class="w-full p-4 md:p-5 lg:w-1/3 relative">
+        <div
+          class="bg-white w-full h-fit px-5 mt-32 lg:mt-12 pb-6 md:px-6 flex flex-col items-center rounded-2xl lg:mt-[88px]"
+        >
+          <div class="-mt-32 flex flex-col items-center">
+            <img
+              src="assets/img/dsk.svg"
+              alt="profile"
+              class="rounded-xl min-w-[20rem] h-52 object-contain mb-4"
+            />
+            <h2 class="text-2xl font-bold">Desak Pramitha</h2>
+            <p class="text-gray-500 mt-2 mb-4 text-xs">Frontend Developer</p>
 
-  <title>Portfolio Desak Pramitha</title>
-
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/unicons.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-  <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="css/tooplate-style.css">
-
-</head>
-
-<body>
-
-  <!-- MENU -->
-  <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Desak Pramitha</a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ml-lg-auto">
-          <div class="ml-lg-4">
-            <div class="color-mode d-lg-flex justify-content-center align-items-center">
-              <i class="color-mode-icon"></i>
-              Color mode
-            </div>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ABOUT -->
-  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-          <div class="about-text">
-            <small class="small-text">Welcome to <span class="mobile-block">My Portfolio website!</span></small>
-            <h1 class="animated animated-text">
-              <span class="mr-2">Hey, I'm</span>
-              <div class="animated-info">
-                <span class="animated-item">Desak Pramitha</span>
-                <span class="animated-item">Desak Pramitha</span>
-                <span class="animated-item">Desak Pramitha</span>
-              </div>
-            </h1>
-
-            <p>Saya lulusan Manajemen Informatika dari Politeknik Negeri Bali. Memiliki kemampuan desain
-              grafis, programming, ketelitian, serta motivasi diri yang sangat baik untuk bekerja dalam tim maupun
-              individu. Saya berminat untuk berkarir di dalam bidang IT dengan di dukung rasa inisiatif dan bertanggung
-              jawab menjadi keunggulan yang dapat saya kontribusikan untuk perusahaan Anda. .</p>
-
-            <div class="custom-btn-group mt-4">
-              <a href="https://github.com/desakpramitha?tab=repositories"
-                class="btn custom-btn custom-btn-bg custom-btn-link">See my repository on github</a>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-5 col-md-12 col-12">
-          <div class="about-image svg">
-            <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="project py-5" id="project">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-11 text-center mx-auto col-12">
-
-          <div class="col-lg-8 py-4 mx-auto">
-            <h2>Projects</h2>
-          </div>
-
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image2.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image3.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image4.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image5.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image6.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image7.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image8.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image9.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image11.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image12.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image13.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image14.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image15.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image16.png" class="img-fluid" alt="project image">
-              </div>
-            </div>
-            <div class="item">
-              <div class="project-info">
-                <img src="images/project/project-image17.png" class="img-fluid" alt="project image">
-              </div>
+            <!-- Social Icons -->
+            <div class="flex gap-3 justify-center md:justify-start">
+              <a href="https://github.com/desakpramitha" target="_blank">
+                <i
+                  data-lucide="github"
+                  class="tab-icon w-5 h-5 text-[#AF7961] mx-auto"
+                ></i>
+              </a>
+              <a href="https://www.linkedin.com/in/desak-made-pradnya-pramitha-putri-56091313b/" target="_blank">
+                <i
+                  data-lucide="linkedin"
+                  class="tab-icon w-5 h-5 text-[#AF7961] mx-auto"
+                ></i>
+              </a>
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
+          <!-- Contact Info -->
+          <div
+            class="space-y-4 w-full text-left bg-[#F2F5F9] p-6 rounded-2xl mt-3"
+          >
+            <div class="flex items-center gap-3 text-sm border-b pb-4">
+              <span class="w-6">
+                <i
+                  data-lucide="smartphone"
+                  class="tab-icon w-5 h-5 text-[#AF7961] mx-auto"
+                ></i
+              ></span>
 
-  </section>
-
-  <!-- FEATURES -->
-  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-6 col-12">
-          <h2 class="mb-4">Experiences</h2>
-
-          <div class="timeline">
-            <div class="timeline-wrapper">
-              <div class="timeline-yr">
-                <span>2021</span>
+              <div class="">
+                <p class="text-xs">Phone</p>
+                <p class="text-black font-semibold">+62 8573 7038 573</p>
               </div>
-              <div class="timeline-info">
-                <h3><span>Web Developer</span><small>PT Dimata Sora Jayate</small></h3>
-                <p>
-                  Mengembangkan User Interface terbaru dengan framework Bootstrap,
-                  Membuat fitur CRUD dan upload file dengan framework CodeIgniter serta berhasil menyelesaikan tugas
-                  projek selama 3 bulan dengan tepat waktu.
+            </div>
+            <div class="flex gap-3 items-center text-sm border-b pb-4">
+              <span class="w-6">
+                <i
+                  data-lucide="mail-open"
+                  class="tab-icon w-5 h-5 text-[#AF7961] mx-auto"
+                ></i
+              ></span>
+              <div class="text-wrap">
+                <p class="text-xs">Email</p>
+                <p class="text-black font-semibold text-wrap">
+                  desakpradnyapramitha @gmail.com
                 </p>
               </div>
             </div>
-
-            <div class="timeline-wrapper">
-              <div class="timeline-yr">
-                <span>2020</span>
+            <div class="flex items-center gap-3 text-sm border-b pb-4">
+              <span class="w-6">
+                <i
+                  data-lucide="map-pin"
+                  class="tab-icon w-5 h-5 text-[#AF7961] mx-auto"
+                ></i
+              ></span>
+              <div class="">
+                <p class="text-xs">Location</p>
+                <p class="text-black font-semibold">Badung, Bali, Indonesia</p>
               </div>
-              <div class="timeline-info">
-                <h3><span>Graphic Design</span><small>Loker Programmer</small></h3>
-                <p> Melakukan riset materi konten yang akan disajikan
-                  Membuat desain konten microblogging, flyer,
-                  banner, dan logo, serta berhasil menyelesaikan tugas
-                  dengan tepat waktu.
-                </p>
-              </div>
+            </div>
+            <div class="flex justify-center">
+              <!-- Download Resume Button -->
+              <button
+                onclick="downloadResume()"
+                class="bg-[#AF7961] text-white px-4 py-2 mt-3 rounded-full text-sm hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                <div class="flex gap-2">
+                  <i
+                    data-lucide="download"
+                    class="tab-icon w-5 h-5 text-white mx-auto"
+                  ></i>
+                  <p>Download Resume</p>
+                </div>
+              </button>
             </div>
           </div>
         </div>
+      </aside>
 
-        <div class="col-lg-6 col-12">
-          <h2 class="mb-4 mobile-mt-2">Educations</h2>
-          <div class="timeline">
-            <div class="timeline-wrapper">
-              <div class="timeline-yr">
-                <span>2021</span>
-              </div>
-              <div class="timeline-info">
-                <h3><span>Politeknik Negeri Bali</span></h3>
-                <p>D3 Manajemen Informatika – IPK 3,97 dari 4,00</p>
-              </div>
-            </div>
+      <!-- Right Content -->
+      <main class="flex-1 p-4 md:p-5 md:pl-0 md:pb-5 md:p-6">
+        <!-- Navigation -->
+        <div class="overflow-scroll">
+          <div
+            class="flex justify-center lg:justify-end gap-2 md:gap-4 mb-6"
+            id="nav-tabs"
+          >
+            <button
+              class="tab-button bg-[#AF7961] text-white text-[11px] py-3 px-4 rounded-2xl min-w-[70px] md:min-w-[72px]"
+              data-tab="resume"
+            >
+              <i
+                data-lucide="file-text"
+                class="tab-icon w-5 h-5 text-white mx-auto"
+              ></i>
+              Resume
+            </button>
+            <button
+              class="tab-button bg-gray-200 text-[11px] py-3 px-4 rounded-2xl min-w-[70px] md:min-w-[72px]"
+              data-tab="work"
+            >
+              <i
+                data-lucide="briefcase-business"
+                class="tab-icon w-5 h-5 text-gray-400 mx-auto"
+              ></i>
+              Work
+            </button>
+            <button
+              class="tab-button bg-gray-200 text-[11px] py-3 px-4 rounded-2xl min-w-[70px] md:min-w-[72px]"
+              data-tab="contact"
+            >
+              <i
+                data-lucide="contact-round"
+                class="tab-icon w-5 h-5 text-gray-400 mx-auto"
+              ></i>
 
-            <div class="timeline-wrapper">
-              <div class="timeline-yr">
-                <span>2018</span>
-              </div>
-              <div class="timeline-info">
-                <h3><span>SMA Negeri 1 Kuta Utara</span></h3>
-                <p>Jurusan IPA</p>
-              </div>
-            </div>
+              Contact
+            </button>
           </div>
         </div>
-      </div>
 
-      <h2 class="mb-4">Skills</h2>
-      <div class="custom-btn-group mt-4">
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">HTML 5</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">CSS</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">PHP</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">CodeIgniter 3</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">MySQL</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">CorelDraw</a>
-        <a href="#" class="btn custom-btn custom-btn-bg custom-btn-link mb-3">Adobe Illustrator</a>
-      </div>
-    </div>
-  </section>
+        <div
+          id="tab-contents"
+          class="bg-white w-full p-6 items-center rounded-2xl md:px-10 md:py-8"
+        >
+          <section id="resume" class="tab-content block">
+            <div class="flex gap-5">
+              <h3
+                class="text-2xl text-[#AF7961] tracking-wider font-semibold inline-block w-fit flex-shrink-0"
+              >
+                Resume
+              </h3>
 
-  <!-- CONTACT -->
+              <div
+                class="h-[2px] bg-[#AF7961] w-[30%] self-center rounded-full"
+              ></div>
+            </div>
 
-  <section class="full-screen contact py-5" id="contact">
-    <div class="container">
-      <h2 class="mb-4">Contact</h2><br>
-      <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-        <div class="contact-info-item">
-          <p><a class="uil uil-phone-alt" href="tel:+6285737038573"> +6285737038573</a></p>
-          <p><a class="uil uil-envelope-alt" href=" mailto:pradnyapramitha89@gmail.com"> pradnyapramitha89@gmail.com</a>
-          <p><a class="uil-user" href="https://www.github.com/desakpramitha"> github.com/desakpramitha</a></p>
-          <p><a class="uil uil-location-point"
-              href="https://www.google.com/maps/place/North+Kuta,+Badung+Regency,+Bali/@-8.6429069,115.1174939,13z/data=!3m1!4b1!4m5!3m4!1s0x2dd2388fc2de0a0b:0xdac0d412e07ae170!8m2!3d-8.6597034!4d115.163278">
-              Dalung, Kuta Utara, Badung, Bali, Indonesia 80361</a>
-          </p>
+            <!-- Content -->
+            <div class="grid md:grid-cols-1 gap-10">
+              
+              <div class="grid md:grid-cols-1 gap-3 xl:gap-5">
+                <sdiv id="about">
+                  <p class="my-4 text-justify mt-8">
+                    I’m a Frontend Engineer with experience in building responsive and
+                    interactive web interfaces using React, TypeScript, and Next.js.
+                    I’m used to working in a team using Git, and I’ve had the
+                    opportunity to mentor interns and serve as a temporary team
+                    leader. I’m also skilled at turning designs into fully functional
+                    user interfaces using Tailwind CSS and MUI.
+                  </p>
+                </sdiv>
+                <div id="education">
+                  <div class="flex gap-2 font-semibold mt-7 mb-4">
+                    <span>
+                      <i
+                        data-lucide="graduation-cap"
+                        class="tab-icon w-7 h-7 text-[#AF7961]/60 mx-auto"
+                      ></i>
+                    </span>
+
+                    <p class="text-xl tracking-wider font-medium self-center">
+                      Education
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <div class="bg-orange-100 p-4 rounded-lg shadow-sm">
+                      <p class="font-regular text-sm text-gray-600">
+                        2018 - 2021
+                      </p>
+                      <p class="font-semibold text-black">
+                        Information Management (D3)
+                      </p>
+                      <p class="font-medium italic text-xs text-black">
+                        State Polytechnic of Bali
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="experience">
+                  <div class="flex gap-2 font-semibold mt-7 mb-4">
+                    <span>
+                      <i
+                        data-lucide="briefcase-business"
+                        class="tab-icon w-7 h-7 text-[#AF7961]/60 mx-auto"
+                      ></i>
+                    </span>
+
+                    <p class="text-xl tracking-wider font-medium self-center">
+                      Experience
+                    </p>
+                  </div>
+                  <div class="flex flex-col lg:grid lg:grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-2">
+                      <div class="bg-[#FFE3BF] p-4 rounded-lg shadow-sm">
+                        <p class="font-regular text-sm text-gray-600">
+                          Aug 2022 - Present
+                        </p>
+                        <p class="font-semibold text-black">
+                          Frontend Developer
+                        </p>
+                        <p class="font-medium italic text-xs text-black">
+                          BTW Edutech
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <div class="bg-[#FFE3BF] p-4 rounded-lg shadow-sm">
+                        <p class="font-regular text-sm text-gray-600">
+                          May - Aug 2022
+                        </p>
+                        <p class="font-semibold text-black">
+                          Backend Developer
+                        </p>
+                        <p class="font-medium italic text-xs text-black">
+                          BTW Edutech
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-3 xl:gap-5">
+                <div id="work-skill">
+                  <div class="flex gap-2 font-semibold mt-6 mb-4">
+                    <p class="text-xl tracking-wider font-medium self-center">
+                      Work Skills
+                    </p>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2">
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        HTML & CSS
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        JavaScript
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        ReactJS
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Tailwind CSS
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Next.js
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Material UI (MUI)
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Axios & React Query
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Responsive Design
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Git
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        SEO Awareness
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="soft-skill">
+                  <div class="flex gap-2 font-semibold mt-6 mb-4">
+                    <p class="text-xl tracking-wider font-medium self-center">
+                      Soft Skills
+                    </p>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2">
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Leadership
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Mentoring
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Communication
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Team Collaboration
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Problem Solving
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Time Management
+                      </p>
+                    </div>
+                    <div class="bg-gray-200 py-2 px-4 rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        Initiative
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="work" class="tab-content hidden">
+            <div class="flex gap-5">
+              <h3
+                class="text-2xl text-[#AF7961] tracking-wider font-semibold inline-block w-fit flex-shrink-0"
+              >
+                Portfolio
+              </h3>
+
+              <div
+                class="h-[2px] bg-[#AF7961] w-[30%] self-center rounded-full"
+              ></div>
+            </div>
+
+            <div
+              class="overflow-scroll flex w-full md:justify-center gap-4 text-gray-600 dark:text-gray-300 mt-9 mb-8"
+              id="tabs"
+            >
+              <button
+                class="tab active text-gray-400 border-b-2 border-[#AF7961] border-primary pb-1 text-[#AF7961] w-fit flex-shrink-0"
+                data-category="all"
+              >
+                All
+              </button>
+              <button
+                class="tab w-fit text-gray-400 flex-shrink-0"
+                data-category="web"
+              >
+                Web Development
+              </button>
+              <button
+                class="tab w-fit text-gray-400 flex-shrink-0"
+                data-category="design"
+              >
+                Design
+              </button>
+              <button
+                class="tab w-fit text-gray-400 flex-shrink-0"
+                data-category="digital-marketing"
+              >
+                Digital Marketing
+              </button>
+            </div>
+
+            <!-- Portfolio Items -->
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio-container">
+
+             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="portfolio">
+              <a
+                href="https://app.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/btwedutech-v4-.png"
+                  class="rounded-lg mb-4"
+                  alt="BTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">App BTW Edutech V4</h2>
+              </a>
+              <!-- <a
+                href="https://app.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/app-edutech-v3.png"
+                  class="rounded-lg mb-4"
+                  alt="BTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">App BTW Edutech V3</h2>
+              </a>
+              <a
+                href="https://sekolah.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/lp-minat-bakat.png"
+                  class="rounded-lg mb-4"
+                  alt="Landing Page Minat Bakat Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Landing Page Minat Bakat</h2>
+              </a>
+              <a
+                href="https://pay.btwedutech.com/product/pppk-2025"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/payment-btwedutech.png"
+                  class="rounded-lg mb-4"
+                  alt="Payment BTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Payment BTW Edutech</h2>
+                 
+              </a>
+              <a
+                href="https://mitra.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/mitra.png"
+                  class="rounded-lg mb-4"
+                  alt="BTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Landing Page Mitra BTW Edutech</h2>
+              </a>
+              <a
+                href="https://mitra-app.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/mitra-1.png"
+                  class="rounded-lg mb-4"
+                  alt="App MitraBTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">App Mitra BTW Edutech</h2>
+              </a>
+              <a
+                href="https://mitra.btwedutech.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/admin-sekolah-minat-bakat.png"
+                  class="rounded-lg mb-4"
+                  alt="Admin Sekolah Minat Bakat BTW Edutech Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Admin Sekolah Minat Bakat BTW Edutech</h2>
+              </a>
+              <a
+                href="https://happybalitourandrental.com/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="digital-marketing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/happytourandrental.png"
+                  class="rounded-lg mb-4"
+                  alt="happybalitourandrental Web"
+                />
+                <p class="text-xs text-gray-500">Digital Marketing</p>
+                <h2 class="font-bold text-gray-800">Happy Bali Tour and Rental</h2>
+                 
+              </a>
+              <a
+                href="https://template-wedding-invitation-brown.vercel.app"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/undangan-wedding.png"
+                  class="rounded-lg mb-4"
+                  alt="Undangan Pernikahan Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Template Undangan Pernikahan</h2>
+                 
+              </a>
+              <a
+                href="https://template-metatah-green-ivory.vercel.app/"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/undangan-metatah.png"
+                  class="rounded-lg mb-4"
+                  alt="Undangan Metatah Web"
+                />
+                <p class="text-xs text-gray-500">Web Development</p>
+                <h2 class="font-bold text-gray-800">Template Undangan Metatah</h2>
+                 
+                
+              </a>
+              <a
+                href="https://www.figma.com/design/NnFy5o5aihszuCkmxXQC3c/Template?node-id=2028-10&t=PwHeo14TlkFdVwPc-1"
+                class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+                data-category="design"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/ui-ux.png"
+                  class="rounded-lg mb-4"
+                  alt="Undangan Metatah"
+                />
+                <p class="text-xs text-gray-500">UI/UX</p>
+                <h2 class="font-bold text-gray-800">Undangan Metatah</h2>
+              </a> -->
+            </div>
+
+            <!-- Modal -->
+            <div id="default-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <!-- Modal Content -->
+              <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold">&times;</button>
+
+                <!-- Modal Title -->
+                <h2 id="modal-title" class="text-2xl font-semibold text-[#AF7961] mb-3"></h2>
+
+                <!-- Modal Content (Image, Category, Link) -->
+                <div id="modal-content">
+                  <!-- Content will be inserted dynamically -->
+                </div>
+
+                <!-- Modal Body -->
+                <div id="modal-body" class="text-xs text-gray-600 mb-4 hidden"></div>
+
+              </div>
+            </div>
+
+
+          </section>
+
+          <section id="contact" class="tab-content hidden">
+            <div class="flex gap-5">
+              <h3
+                class="text-2xl text-[#AF7961] tracking-wider font-semibold inline-block w-fit flex-shrink-0"
+              >
+                Contact
+              </h3>
+
+              <div
+                class="h-[2px] bg-[#AF7961] w-[30%] self-center rounded-full"
+              ></div>
+            </div>
+
+            <p class="my-4 text-justify mt-7">
+              Have a question or want to work together? Drop me a message! I’d love to connect and explore how we can create something awesome.
+            </p>
+
+            <!-- Content -->
+            <div id="portfolio" class="grid grid-flow-row auto-rows-auto grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-4">
+              <a
+                href="http://wa.me/6285737038573"
+                class="item bg-[#FFEED9] p-4 rounded-xl flex hover:scale-105 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="flex items-center gap-3 text-sm self-center">
+                  <span>
+                    <i
+                      data-lucide="phone"
+                      class="tab-icon text-2xl text-[#AF7961] mx-auto"
+                    ></i
+                  ></span>
+                  <div class="">
+                    <p class="text-xs">Phone:</p>
+                    <p class="text-black font-semibold">+62 857 3703 8573</p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:desakpradnyapramitha@gmail.com?subject=Pertanyaan&body=Halo%20Desak,%20saya%20ingin%20bertanya..."
+                class="item bg-[#FFEED9] p-4 rounded-xl hover:scale-105 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="flex items-center gap-4 text-sm">
+                  <span>
+                    <i
+                      data-lucide="mail"
+                      class="tab-icon text-2xl text-[#AF7961] mx-auto"
+                    ></i
+                  ></span>
+
+                  <div class="">
+                    <p class="text-xs">Email:</p>
+                    <p class="text-black font-semibold">desakpradnyapramitha@
+                      gmail.com</p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/desak-made-pradnya-pramitha-putri-56091313b/"
+                class="item bg-[#FFEED9] p-4 rounded-xl hover:scale-105 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="flex items-center gap-4 text-sm">
+                  <span>
+                    <i
+                      data-lucide="linkedin"
+                      class="tab-icon text-2xl text-[#AF7961] mx-auto"
+                    ></i
+                  ></span>
+
+                  <div class="">
+                    <p class="text-xs">Linkedin:</p>
+                    <p class="text-black font-semibold">
+                      Desak Made Pradnya</br> 
+                      Pramitha Putri
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/desakpramitha"
+                class="item bg-[#FFEED9] p-4 rounded-xl flex hover:scale-105 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="flex items-center gap-4 text-sm self-center">
+                  <span>
+                    <i
+                      data-lucide="github"
+                      class="tab-icon text-2xl text-[#AF7961] mx-auto"
+                    ></i
+                  ></span>
+
+                  <div class="">
+                    <p class="text-xs">Github:</p>
+                    <p class="text-black font-semibold">desakpramitha</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
         </div>
-      </div>
+      </main>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-12 col-12">
-          <p class="copyright-text text-center">Copyright &copy; 2022 Desak Pramitha . All rights reserved</p>
-        </div>
-
-      </div>
+    <div class="bg-white py-3 text-xs flex justify-center mt-8">
+      <p class="text-center text-gray-400">desakpramitha ©2025</p>
     </div>
-  </footer>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/Headroom.js"></script>
-  <script src="js/jQuery.headroom.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/custom.js"></script>
+    <script>
+      const buttons = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
 
-</body>
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const tab = btn.getAttribute('data-tab');
 
+          // Reset semua button ke state non-aktif
+          buttons.forEach((b) => {
+            b.classList.remove('bg-[#AF7961]', 'text-white');
+            b.classList.add('bg-gray-200', 'text-black');
+
+            // Ubah warna icon ke abu-abu
+            const icon = b.querySelector('.tab-icon');
+            icon?.classList.remove('text-white');
+            icon?.classList.add('text-gray-400');
+          });
+
+          // Aktifkan button yang dipilih
+          btn.classList.remove('bg-gray-200', 'text-black');
+          btn.classList.add('bg-[#AF7961]', 'text-white');
+
+          // Ubah warna icon jadi putih
+          const activeIcon = btn.querySelector('.tab-icon');
+          activeIcon?.classList.remove('text-gray-500');
+          activeIcon?.classList.add('text-white');
+
+          // Tampilkan konten sesuai tab
+          contents.forEach((c) => {
+            c.classList.add('hidden');
+            c.classList.remove('block');
+          });
+
+          document.getElementById(tab).classList.remove('hidden');
+          document.getElementById(tab).classList.add('block');
+        });
+      });
+    </script>
+
+    <!-- Portfolio Func -->
+    <!-- <script>
+      // Tab filter
+      const tabs = document.querySelectorAll('.tab');
+      const items = document.querySelectorAll('.item');
+
+      console.log({tabs, items})
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((t) =>
+            t.classList.remove(
+              'text-primary',
+              'border-b-2',
+              'border-[#AF7961]',
+              'border-primary',
+              'pb-1',
+              'active',
+              'text-[#AF7961]'
+            )
+          );
+          tab.classList.add(
+            'border-b-2',
+            'border-primary',
+            'border-[#AF7961]',
+            'pb-1',
+            'active',
+            'text-[#AF7961]'
+          );
+
+          const category = tab.getAttribute('data-category');
+          items.forEach((item) => {
+            if (
+              category === 'all' ||
+              item.getAttribute('data-category') === category
+            ) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const portfolioData = [
+  {
+    id: 'app-btwedutech-v4',
+    title: 'App BTW Edutech V4',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/btwedutech-v4-.png',
+    description: 'Pengembangan aplikasi V4 dengan ReactJS dan Tailwind CSS.',
+    url: 'https://app.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'app-btwedutech-v3',
+    title: 'App BTW Edutech V3',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/app-edutech-v3.png',
+    description: 'Kontribusi pada versi sebelumnya dari aplikasi Edutech.',
+    url: 'https://app.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'lp-minat-bakat',
+    title: 'Landing Page Minat Bakat',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/lp-minat-bakat.png',
+    description: 'Landing page untuk fitur minat dan bakat siswa.',
+    url: 'https://sekolah.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'payment-btw',
+    title: 'Payment BTW Edutech',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/payment-btwedutech.png',
+    description: 'Halaman checkout produk PPPK 2025.',
+    url: 'https://pay.btwedutech.com/product/pppk-2025',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'mitra-btw',
+    title: 'Landing Page Mitra BTW Edutech',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/mitra.png',
+    description: 'Landing page untuk afiliasi dan kemitraan BTW.',
+    url: 'https://mitra.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'app-mitra-btw',
+    title: 'App Mitra BTW Edutech',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/mitra-1.png',
+    description: 'Aplikasi mitra untuk manajemen afiliasi.',
+    url: 'https://mitra-app.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'admin-sekolah',
+    title: 'Admin Sekolah Minat Bakat BTW Edutech',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/admin-sekolah-minat-bakat.png',
+    description: 'Panel admin untuk pengelolaan minat bakat sekolah.',
+    url: 'https://mitra.btwedutech.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'happy-bali-tour',
+    title: 'Happy Bali Tour and Rental',
+    category: 'Digital Marketing',
+    img: 'assets/img/portfolio/happytourandrental.png',
+    description: 'Optimasi SEO dasar dan UI landing page untuk pemasaran digital.',
+    url: 'https://happybalitourandrental.com/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'digital-marketing',
+  },
+  {
+    id: 'wedding-template',
+    title: 'Template Undangan Pernikahan',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/undangan-wedding.png',
+    description: 'Template undangan digital dengan desain elegan.',
+    url: 'https://template-wedding-invitation-brown.vercel.app',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'metatah-template',
+    title: 'Template Undangan Metatah',
+    category: 'Web Development',
+    img: 'assets/img/portfolio/undangan-metatah.png',
+    description: 'Template undangan untuk upacara Metatah dengan desain adat Bali.',
+    url: 'https://template-metatah-green-ivory.vercel.app/',
+    bgColor: '#FFE3BF',
+    dataCategory: 'web',
+  },
+  {
+    id: 'uiux-metatah',
+    title: 'Undangan Metatah',
+    category: 'UI/UX',
+    img: 'assets/img/portfolio/ui-ux.png',
+    description: 'Desain UI/UX undangan Metatah menggunakan Figma.',
+    url: 'https://www.figma.com/design/NnFy5o5aihszuCkmxXQC3c/Template?node-id=2028-10&t=PwHeo14TlkFdVwPc-1',
+    bgColor: '#FFE3BF',
+    dataCategory: 'design',
+  },
+];
+
+      const container = document.getElementById('portfolio');
+
+      portfolioData.forEach(item => {
+        const card = document.createElement('div');
+        // card.className = `item p-4 rounded-xl hover:scale-105 transition cursor-pointer`;
+        // card.style.backgroundColor = item.bgColor;
+        card.setAttribute('data-category', item.dataCategory);
+
+        card.innerHTML = `
+          <div
+            onclick="openModal('${item.id}')"
+            class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
+            data-category="${item.dataCategory}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="${item.img}"
+              class="rounded-lg mb-4"
+              alt="${item.title}"
+            />
+              <p class="text-xs text-gray-500">${item.category}</p>
+              <h2 class="font-bold text-gray-800">${item.title}</h2>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      function openModal(projectId) {
+        const data = portfolioData.find(item => item.id === projectId);
+        if (!data) return;
+
+        document.getElementById('modal-title').textContent = data.title;
+        document.getElementById('modal-body').innerHTML = `<p>${data.description}</p>`;
+        document.getElementById('default-modal').classList.remove('hidden');
+      }
+
+      function closeModal() {
+        document.getElementById('default-modal').classList.add('hidden');
+      }
+    </script> -->
+
+    <script>
+     const portfolioData = [
+        {
+          id: 'app-btwedutech-v4',
+          title: 'App BTW Edutech V4',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/btwedutech-v4-.png',
+          description: 'Pengembangan aplikasi V4 dengan ReactJS dan Tailwind CSS.',
+          url: 'https://app.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'app-btwedutech-v3',
+          title: 'App BTW Edutech V3',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/app-edutech-v3.png',
+          description: 'Kontribusi pada versi sebelumnya dari aplikasi Edutech.',
+          url: 'https://app.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'lp-minat-bakat',
+          title: 'Landing Page Minat Bakat',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/lp-minat-bakat.png',
+          description: 'Landing page untuk fitur minat dan bakat siswa.',
+          url: 'https://sekolah.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'payment-btw',
+          title: 'Payment BTW Edutech',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/payment-btwedutech.png',
+          description: 'Halaman checkout produk PPPK 2025.',
+          url: 'https://pay.btwedutech.com/product/pppk-2025',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'mitra-btw',
+          title: 'Landing Page Mitra BTW Edutech',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/mitra.png',
+          description: 'Landing page untuk afiliasi dan kemitraan BTW.',
+          url: 'https://mitra.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'app-mitra-btw',
+          title: 'App Mitra BTW Edutech',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/mitra-1.png',
+          description: 'Aplikasi mitra untuk manajemen afiliasi.',
+          url: 'https://mitra-app.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'admin-sekolah',
+          title: 'Admin Sekolah Minat Bakat BTW Edutech',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/admin-sekolah-minat-bakat.png',
+          description: 'Panel admin untuk pengelolaan minat bakat sekolah.',
+          url: 'https://mitra.btwedutech.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'happy-bali-tour',
+          title: 'Happy Bali Tour and Rental',
+          category: 'Digital Marketing',
+          img: 'assets/img/portfolio/happytourandrental.png',
+          description: 'Optimasi SEO dasar dan UI landing page untuk pemasaran digital.',
+          url: 'https://happybalitourandrental.com/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'digital-marketing',
+        },
+        {
+          id: 'wedding-template',
+          title: 'Template Undangan Pernikahan',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/undangan-wedding.png',
+          description: 'Template undangan digital dengan desain elegan.',
+          url: 'https://template-wedding-invitation-brown.vercel.app',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'metatah-template',
+          title: 'Template Undangan Metatah',
+          category: 'Web Development',
+          img: 'assets/img/portfolio/undangan-metatah.png',
+          description: 'Template undangan untuk upacara Metatah dengan desain adat Bali.',
+          url: 'https://template-metatah-green-ivory.vercel.app/',
+          bgColor: '#FFE3BF',
+          dataCategory: 'web',
+        },
+        {
+          id: 'uiux-metatah',
+          title: 'Undangan Metatah',
+          category: 'UI/UX',
+          img: 'assets/img/portfolio/ui-ux.png',
+          description: 'Desain UI/UX undangan Metatah menggunakan Figma.',
+          url: 'https://www.figma.com/design/NnFy5o5aihszuCkmxXQC3c/Template?node-id=2028-10&t=PwHeo14TlkFdVwPc-1',
+          bgColor: '#FFE3BF',
+          dataCategory: 'design',
+        },
+      ];
+
+
+      const tabs = document.querySelectorAll('.tab');
+      const container = document.getElementById('portfolio');
+
+      // Fungsi render data
+      function renderPortfolio(category = 'all') {
+        container.innerHTML = ''; // Kosongkan container
+
+        const filtered = portfolioData.filter(item =>
+          category === 'all' ? true : item.dataCategory === category
+        );
+
+        filtered.forEach(item => {
+          const card = document.createElement('div');
+          card.setAttribute('data-category', item.dataCategory);
+          card.innerHTML = `
+            <div
+              onclick="openModal('${item.id}')"
+              class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition h-full"
+            >
+              <img
+                src="${item.img}"
+                class="rounded-lg mb-4"
+                alt="${item.title}"
+              />
+              <p class="text-xs text-gray-500">${item.category}</p>
+              <h2 class="font-bold text-gray-800">${item.title}</h2>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      // Inisialisasi pertama
+      renderPortfolio();
+
+      // Tab event
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('text-[#AF7961]', 'border-b-2', 'border-[#AF7961]', 'pb-1', 'active'));
+          tab.classList.add('text-[#AF7961]', 'border-b-2', 'border-[#AF7961]', 'pb-1', 'active');
+
+          const category = tab.getAttribute('data-category');
+          renderPortfolio(category);
+        });
+      });
+
+      // Modal
+      function openModal(projectId) {
+        const data = portfolioData.find(item => item.id === projectId);
+        if (!data) return;
+
+        document.getElementById('modal-title').textContent = data.title;
+        document.getElementById('modal-body').innerHTML = `<p>${data.description}</p>`;
+        document.getElementById('modal-content').innerHTML = `
+          <img
+            src="${data.img}"        
+            class="rounded-lg mb-4"
+            alt="${data.title}"
+          />
+          <p class="text-sm pt-4 text-gray-700 font-bold">Note:</p>
+          <p class="text-sm text-gray-700">${data.description}</p>
+           <button
+                onclick="redirectToWebsiteNewTab('${data.url}')"
+                class="bg-[#AF7961] text-white px-4 py-2 mt-3 rounded-full text-sm hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+               Demo
+              </button>
+         
+        `;
+
+        document.getElementById('default-modal').classList.remove('hidden');
+      }
+
+      function redirectToWebsiteNewTab(url) {
+        window.open(url, '_blank');
+      }
+
+      function closeModal() {
+        document.getElementById('default-modal').classList.add('hidden');
+      }
+    </script>
+
+
+
+    <!-- Download Resume -->
+    <script>
+      function downloadResume() {
+        const url = '/assets/file/resume.pdf';
+        const fileName = 'Desak_Pramitha_Resume.pdf';
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
