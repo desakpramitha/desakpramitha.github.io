@@ -34,16 +34,6 @@
   <body
     class="bg-[#f5f7fa] text-gray-800 font-quicksand max-w-5xl mx-auto pt-6 md:pb-0"
   >
-    <!-- <div class="hidden md:flex justify-between w-full pt-6 px-5 mb-6">
-      <p class="self-center font-regular font-pacifico text-2xl">
-        Deva
-        <span
-          class="bg-gradient-to-b from-[#FF9C1B] to-[#E80505] bg-clip-text text-transparent"
-          >Karisnu</span
-        >
-      </p>
-    </div> -->
-
     <div class="flex flex-col lg:flex-row">
       <!-- Left Sidebar -->
       <aside class="w-full p-4 md:p-5 lg:w-1/3 relative">
@@ -753,7 +743,7 @@
       <p class="text-center text-gray-400">desakpramitha ©2025</p>
     </div>
 
-    <script>
+    <!-- <script>
       const buttons = document.querySelectorAll('.tab-button');
       const contents = document.querySelectorAll('.tab-content');
 
@@ -791,208 +781,66 @@
           document.getElementById(tab).classList.add('block');
         });
       });
-    </script>
+    </script> -->
+    <script>
+      const buttons = document.querySelectorAll('.tab-button');
+      const contents = document.querySelectorAll('.tab-content');
 
-    <!-- Portfolio Func -->
-    <!-- <script>
-      // Tab filter
-      const tabs = document.querySelectorAll('.tab');
-      const items = document.querySelectorAll('.item');
+      function activateTab(tabId) {
+        // Reset semua button ke state non-aktif
+        buttons.forEach((b) => {
+          b.classList.remove('bg-[#AF7961]', 'text-white');
+          b.classList.add('bg-gray-200', 'text-black');
 
-      console.log({tabs, items})
+          const icon = b.querySelector('.tab-icon');
+          icon?.classList.remove('text-white');
+          icon?.classList.add('text-gray-400');
+        });
 
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          tabs.forEach((t) =>
-            t.classList.remove(
-              'text-primary',
-              'border-b-2',
-              'border-[#AF7961]',
-              'border-primary',
-              'pb-1',
-              'active',
-              'text-[#AF7961]'
-            )
-          );
-          tab.classList.add(
-            'border-b-2',
-            'border-primary',
-            'border-[#AF7961]',
-            'pb-1',
-            'active',
-            'text-[#AF7961]'
-          );
+        // Temukan dan aktifkan button yang sesuai tabId
+        const btn = Array.from(buttons).find(b => b.getAttribute('data-tab') === tabId);
+        if (btn) {
+          btn.classList.remove('bg-gray-200', 'text-black');
+          btn.classList.add('bg-[#AF7961]', 'text-white');
 
-          const category = tab.getAttribute('data-category');
-          items.forEach((item) => {
-            if (
-              category === 'all' ||
-              item.getAttribute('data-category') === category
-            ) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-            }
-          });
+          const activeIcon = btn.querySelector('.tab-icon');
+          activeIcon?.classList.remove('text-gray-500');
+          activeIcon?.classList.add('text-white');
+        }
+
+        // Tampilkan konten sesuai tab
+        contents.forEach((c) => {
+          c.classList.add('hidden');
+          c.classList.remove('block');
+        });
+
+        const content = document.getElementById(tabId);
+        content?.classList.remove('hidden');
+        content?.classList.add('block');
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const tab = btn.getAttribute('data-tab');
+          activateTab(tab);
+
+          // Update hash URL tanpa scroll ke atas
+          history.replaceState(null, '', `#${tab}`);
         });
       });
-    </script>
 
-    <script>
-      const portfolioData = [
-  {
-    id: 'app-btwedutech-v4',
-    title: 'App BTW Edutech V4',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/btwedutech-v4-.png',
-    description: 'Pengembangan aplikasi V4 dengan ReactJS dan Tailwind CSS.',
-    url: 'https://app.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'app-btwedutech-v3',
-    title: 'App BTW Edutech V3',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/app-edutech-v3.png',
-    description: 'Kontribusi pada versi sebelumnya dari aplikasi Edutech.',
-    url: 'https://app.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'lp-minat-bakat',
-    title: 'Landing Page Minat Bakat',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/lp-minat-bakat.png',
-    description: 'Landing page untuk fitur minat dan bakat siswa.',
-    url: 'https://sekolah.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'payment-btw',
-    title: 'Payment BTW Edutech',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/payment-btwedutech.png',
-    description: 'Halaman checkout produk PPPK 2025.',
-    url: 'https://pay.btwedutech.com/product/pppk-2025',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'mitra-btw',
-    title: 'Landing Page Mitra BTW Edutech',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/mitra.png',
-    description: 'Landing page untuk afiliasi dan kemitraan BTW.',
-    url: 'https://mitra.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'app-mitra-btw',
-    title: 'App Mitra BTW Edutech',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/mitra-1.png',
-    description: 'Aplikasi mitra untuk manajemen afiliasi.',
-    url: 'https://mitra-app.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'admin-sekolah',
-    title: 'Admin Sekolah Minat Bakat BTW Edutech',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/admin-sekolah-minat-bakat.png',
-    description: 'Panel admin untuk pengelolaan minat bakat sekolah.',
-    url: 'https://mitra.btwedutech.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'happy-bali-tour',
-    title: 'Happy Bali Tour and Rental',
-    category: 'Digital Marketing',
-    img: 'assets/img/portfolio/happytourandrental.png',
-    description: 'Optimasi SEO dasar dan UI landing page untuk pemasaran digital.',
-    url: 'https://happybalitourandrental.com/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'digital-marketing',
-  },
-  {
-    id: 'wedding-template',
-    title: 'Template Undangan Pernikahan',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/undangan-wedding.png',
-    description: 'Template undangan digital dengan desain elegan.',
-    url: 'https://template-wedding-invitation-brown.vercel.app',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'metatah-template',
-    title: 'Template Undangan Metatah',
-    category: 'Web Development',
-    img: 'assets/img/portfolio/undangan-metatah.png',
-    description: 'Template undangan untuk upacara Metatah dengan desain adat Bali.',
-    url: 'https://template-metatah-green-ivory.vercel.app/',
-    bgColor: '#FFE3BF',
-    dataCategory: 'web',
-  },
-  {
-    id: 'uiux-metatah',
-    title: 'Undangan Metatah',
-    category: 'UI/UX',
-    img: 'assets/img/portfolio/ui-ux.png',
-    description: 'Desain UI/UX undangan Metatah menggunakan Figma.',
-    url: 'https://www.figma.com/design/NnFy5o5aihszuCkmxXQC3c/Template?node-id=2028-10&t=PwHeo14TlkFdVwPc-1',
-    bgColor: '#FFE3BF',
-    dataCategory: 'design',
-  },
-];
-
-      const container = document.getElementById('portfolio');
-
-      portfolioData.forEach(item => {
-        const card = document.createElement('div');
-        // card.className = `item p-4 rounded-xl hover:scale-105 transition cursor-pointer`;
-        // card.style.backgroundColor = item.bgColor;
-        card.setAttribute('data-category', item.dataCategory);
-
-        card.innerHTML = `
-          <div
-            onclick="openModal('${item.id}')"
-            class="item bg-[#FFE3BF] p-4 rounded-xl hover:scale-105 transition"
-            data-category="${item.dataCategory}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="${item.img}"
-              class="rounded-lg mb-4"
-              alt="${item.title}"
-            />
-              <p class="text-xs text-gray-500">${item.category}</p>
-              <h2 class="font-bold text-gray-800">${item.title}</h2>
-          </div>
-        `;
-        container.appendChild(card);
+      // Aktifkan tab berdasarkan hash di URL saat halaman dibuka
+      window.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+          activateTab(hash);
+        } else {
+          // Opsional: aktifkan tab pertama secara default
+          const firstTab = buttons[0]?.getAttribute('data-tab');
+          if (firstTab) activateTab(firstTab);
+        }
       });
-
-      function openModal(projectId) {
-        const data = portfolioData.find(item => item.id === projectId);
-        if (!data) return;
-
-        document.getElementById('modal-title').textContent = data.title;
-        document.getElementById('modal-body').innerHTML = `<p>${data.description}</p>`;
-        document.getElementById('default-modal').classList.remove('hidden');
-      }
-
-      function closeModal() {
-        document.getElementById('default-modal').classList.add('hidden');
-      }
-    </script> -->
+    </script>
 
     <script>
      const portfolioData = [
@@ -1001,10 +849,14 @@
           title: 'App BTW Edutech V4',
           category: 'Web Development',
           img: 'assets/img/portfolio/btwedutech-v4-.png',
-          description: 'Pengembangan aplikasi V4 dengan ReactJS dan Tailwind CSS.',
+          description: 'Aplikasi edukasi yang membantu pengguna dalam pengayaan materi & soal tes, pembiasaan sistem dan alat tes, serta penguasaan strategi mengerjakan ujian berbasis komputer (CBT/CAT).',
           url: 'https://app.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'Agustus 2024 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'app-btwedutech-v3',
@@ -1012,19 +864,27 @@
           category: 'Web Development',
           img: 'assets/img/portfolio/app-edutech-v3.png',
           description: 'Kontribusi pada versi sebelumnya dari aplikasi Edutech.',
-          url: 'https://app.btwedutech.com/',
+          url: 'https://v3.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'September 2022 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'lp-minat-bakat',
           title: 'Landing Page Minat Bakat',
           category: 'Web Development',
           img: 'assets/img/portfolio/lp-minat-bakat.png',
-          description: 'Landing page untuk fitur minat dan bakat siswa.',
+          description: 'Platform gratis dari BTW Edutech untuk sekolah-sekolah di Indonesia yang menyediakan layanan tes psikologis (IST, MBTI, Holland, RMIB) guna membantu siswa mengenali potensi, kepribadian, dan minat mereka.',
           url: 'https://sekolah.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'Juni 2023 – Juli 2023',
+          technologies: ['Next.js', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'payment-btw',
@@ -1035,6 +895,10 @@
           url: 'https://pay.btwedutech.com/product/pppk-2025',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'September 2022 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'mitra-btw',
@@ -1045,6 +909,10 @@
           url: 'https://mitra.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'September 2022 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'app-mitra-btw',
@@ -1055,6 +923,10 @@
           url: 'https://mitra-app.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'September 2022 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'admin-sekolah',
@@ -1065,6 +937,10 @@
           url: 'https://mitra.btwedutech.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'web',
+          periode: 'September 2022 – Sekarang',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Frontend Developer',
         },
         {
           id: 'happy-bali-tour',
@@ -1075,6 +951,10 @@
           url: 'https://happybalitourandrental.com/',
           bgColor: '#FFE3BF',
           dataCategory: 'digital-marketing',
+          periode: 'Desember 2024',
+          technologies: ['React.js', 'Typescript', 'Tailwind CSS'
+          ],
+          role: 'Digital M',
         },
         {
           id: 'wedding-template',
@@ -1170,6 +1050,16 @@
           />
           <p class="text-sm pt-4 text-gray-700 font-bold">Note:</p>
           <p class="text-sm text-gray-700">${data.description}</p>
+
+           <div class="flex flex-wrap gap-1 mt-3">
+           ${data?.technologies?.map(tech => `<div class="bg-gray-200 px-2 py-[2px] rounded-lg shadow-sm">
+                      <p class="text-xs font-semibold text-black">
+                        ${tech}
+                      </p>
+                    </div>`).join('')}
+            </div>
+                      
+                   
            <button
                 onclick="redirectToWebsiteNewTab('${data.url}')"
                 class="bg-[#AF7961] text-white px-4 py-2 mt-3 rounded-full text-sm hover:scale-105 active:scale-95 transition-all duration-300"
@@ -1189,6 +1079,15 @@
       function closeModal() {
         document.getElementById('default-modal').classList.add('hidden');
       }
+
+      // Auto buka modal jika ada param projectId di URL
+      window.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('projectId');
+        if (projectId) {
+          openModal(projectId);
+        }
+      });
     </script>
 
 
